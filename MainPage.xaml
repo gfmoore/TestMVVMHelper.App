@@ -10,6 +10,19 @@
     <Button Text="Hit Me"
             FontSize="30"
             Command="{Binding HitMeCommand}" />
+
+    <CollectionView ItemsSource="{Binding Monkeys}"  
+                    SelectionMode="Single"
+                    SelectedItem="{Binding SelectedItem}"
+                    SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                    SelectionChangedCommandParameter="{Binding .}" >
+      <CollectionView.ItemTemplate>
+        <DataTemplate>
+          <Label Text="{Binding }"
+                 FontSize="30" />
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
     
   </StackLayout>
 
