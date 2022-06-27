@@ -30,22 +30,24 @@ public partial class MainPageViewModel : ObservableObject
   [RelayCommand]
   public async void SelectionChanged()
   {
-    Console.WriteLine($"Hi {SelectedItem}");
+    Console.WriteLine($"Hi {SelectedItem.Name}");
 
-    await Task.Delay(5000);
+    //await Task.Delay(5000);
 
     SelectedItem = null;
   }
 
-
+  //or press the button
 
   [RelayCommand]
   public void HitMe()
   {
-    Console.WriteLine($"Hello {SelectedItem}");
+    Console.WriteLine($"Hello {SelectedItem.Name}");
     Greet = "Hi, friend";
 
-    SelectedItem = null;
+    //SelectedItem = null;
+    //SelectedItem = Monkeys[0];
+    SelectedItem = new Monkey();
   }
 
 }
