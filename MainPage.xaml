@@ -18,13 +18,12 @@
                     SelectionChangedCommandParameter="{Binding .}" >
       <CollectionView.ItemTemplate>
         <DataTemplate>
-          <Label Text="{Binding }"
-                 FontSize="30" />
+          <Label Text="{Binding Name}"
+                 FontSize="25" />
         </DataTemplate>
       </CollectionView.ItemTemplate>
     </CollectionView>
     
   </StackLayout>
 
-  
 </ContentPage>
